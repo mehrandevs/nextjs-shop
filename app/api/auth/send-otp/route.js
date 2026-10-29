@@ -50,7 +50,6 @@ export async function POST(request) {
 
     const otpCode = crypto.randomInt(100000, 999999).toString();
 
-    // await sendSms(phone, `کد تایید شما ${otpCode}`);
     //ارسال کد
 
     const otp = await Otp.create({
