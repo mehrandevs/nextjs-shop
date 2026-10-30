@@ -1,231 +1,177 @@
-# Next.js Shop
+# فروشگاه اینترنتی Next.js Shop
 
-A full-stack e-commerce application built with **Next.js App Router**, **React**, and **MongoDB**. The project includes a customer-facing storefront, shopping cart and checkout flow, account features, and an administration area for managing the store.
+[![مشاهده نسخه آنلاین](https://img.shields.io/badge/مشاهده-نسخه%20آنلاین-0A66C2?style=for-the-badge)](https://nextjs-shop-devs.vercel.app/)
+[![مخزن GitHub](https://img.shields.io/badge/GitHub-مخزن%20پروژه-181717?style=for-the-badge&logo=github)](https://github.com/mehrandevs/nextjs-shop)
 
-> This repository is under active development. Features, configuration, and routes may change as the application evolves.
+یک پروژه فروشگاه اینترنتی فول‌استک که با استفاده از **Next.js، React و MongoDB** توسعه داده شده است. این پروژه شامل بخش فروشگاه برای کاربران، سبد خرید، فرایند ثبت سفارش، امکانات حساب کاربری و پنل مدیریت فروشگاه است.
 
-## Overview
+<blockquote>
+  این پروژه همچنان در حال توسعه است و ممکن است امکانات و ساختار بخش‌های مختلف آن در آینده تغییر کند.
+</blockquote>
 
-The application is organized around two main experiences:
+## نسخه آنلاین پروژه
 
-- **Storefront:** browse products, view product details, manage a cart, and proceed through checkout.
-- **Administration:** manage products, categories, users, discounts, comments, and stock through dedicated dashboard pages.
+برای مشاهده و بررسی فروشگاه، از لینک زیر استفاده کنید:
 
-## Features
+**[مشاهده فروشگاه آنلاین](https://nextjs-shop-devs.vercel.app/)**
 
-### Storefront
-- Product listing and individual product detail pages
-- Featured and related product sections
-- Product categories and home-page category navigation
-- Shopping cart with shared cart state
-- Checkout flow
-- Address management
-- Customer profile and order history pages
+## معرفی پروژه
 
-### Authentication and accounts
-- Login and registration pages
-- NextAuth-based authentication
-- OTP send and verification API routes
-- Customer profile and address management
+ساختار برنامه بر اساس دو بخش اصلی طراحی شده است:
 
-### Store administration
-- Admin dashboard
-- Product creation, editing, and listing
-- Category management
-- User management
-- Discount creation, editing, and verification
-- Stock management
-- Comment management
-- Order management endpoints
+- **فروشگاه:** کاربران می‌توانند محصولات را مشاهده کنند، جزئیات هر محصول را ببینند، محصولات را به سبد خرید اضافه کنند و فرایند ثبت سفارش را انجام دهند.
+- **پنل مدیریت:** مدیر فروشگاه می‌تواند محصولات، دسته‌بندی‌ها، کاربران، تخفیف‌ها، دیدگاه‌ها و موجودی کالاها را مدیریت کند.
 
-### Backend
-- REST API routes implemented with the Next.js App Router
-- MongoDB connection managed through Mongoose
-- Dedicated Mongoose models for users, products, categories, carts, orders, discounts, comments, and OTP records
+## امکانات پروژه
 
-## Tech Stack
+### فروشگاه
+- نمایش فهرست محصولات و صفحه جزئیات هر محصول
+- نمایش محصولات ویژه و محصولات مرتبط
+- نمایش و پیمایش دسته‌بندی محصولات
+- سبد خرید با مدیریت وضعیت مشترک
+- فرایند ثبت سفارش و پرداخت
+- مدیریت نشانی‌های کاربران
+- صفحه پروفایل و تاریخچه سفارش‌ها
 
-| Technology | Purpose |
+### احراز هویت و حساب کاربری
+- صفحات ورود و ثبت‌نام
+- احراز هویت با استفاده از NextAuth
+- مسیرهای API برای ارسال و تأیید کد یک‌بارمصرف (OTP)
+- مدیریت پروفایل و نشانی‌های کاربر
+
+### پنل مدیریت
+- داشبورد مدیریت فروشگاه
+- افزودن، ویرایش و مشاهده محصولات
+- مدیریت دسته‌بندی‌ها
+- مدیریت کاربران
+- ایجاد، ویرایش و بررسی کدهای تخفیف
+- مدیریت موجودی محصولات
+- مدیریت دیدگاه‌ها
+- مسیرهای مدیریت سفارش‌ها
+
+### بخش بک‌اند
+- پیاده‌سازی REST API با استفاده از App Router در Next.js
+- اتصال به MongoDB با استفاده از Mongoose
+- استفاده از مدل‌های مجزا برای کاربران، محصولات، دسته‌بندی‌ها، سبدهای خرید، سفارش‌ها، تخفیف‌ها، دیدگاه‌ها و کدهای یک‌بارمصرف
+
+## فناوری‌های استفاده‌شده
+
+| فناوری | کاربرد |
 | --- | --- |
-| [Next.js](https://nextjs.org/) 16 | React framework and App Router |
-| [React](https://react.dev/) 19 | User interface |
-| [MongoDB](https://www.mongodb.com/) | Database |
-| [Mongoose](https://mongoosejs.com/) | MongoDB object modeling |
-| [NextAuth.js](https://next-auth.js.org/) | Authentication |
-| [Bootstrap](https://getbootstrap.com/) 5 | Styling and responsive UI |
-| [React Bootstrap](https://react-bootstrap.netlify.app/) | Bootstrap components for React |
-| [React Icons](https://react-icons.github.io/react-icons/) | Icon components |
-| [React Toastify](https://fkhadra.github.io/react-toastify/) | Toast notifications |
+| [Next.js 16](https://nextjs.org/) | فریم‌ورک اصلی پروژه و App Router |
+| [React 19](https://react.dev/) | ساخت رابط کاربری |
+| [MongoDB](https://www.mongodb.com/) | پایگاه داده |
+| [Mongoose](https://mongoosejs.com/) | مدل‌سازی و ارتباط با MongoDB |
+| [NextAuth.js](https://next-auth.js.org/) | احراز هویت کاربران |
+| [Bootstrap 5](https://getbootstrap.com/) | طراحی و واکنش‌گرایی رابط کاربری |
+| [React Bootstrap](https://react-bootstrap.netlify.app/) | استفاده از کامپوننت‌های Bootstrap در React |
+| [React Icons](https://react-icons.github.io/react-icons/) | آیکون‌های رابط کاربری |
+| [React Toastify](https://fkhadra.github.io/react-toastify/) | نمایش پیام‌ها و اعلان‌ها |
 
-The codebase is written in **JavaScript**.
+زبان برنامه‌نویسی استفاده‌شده در پروژه **JavaScript** است.
 
-## Getting Started
+## ساختار پروژه
 
-### Prerequisites
-
-Make sure the following are installed:
-
-- [Node.js](https://nodejs.org/) (use a current LTS release)
-- npm
-- A MongoDB database, either local or hosted (for example, MongoDB Atlas)
-- A GitHub account is only needed if you plan to clone or contribute to this repository
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/mehrandevs/nextjs-shop.git
-cd nextjs-shop
-```
-
-### 2. Install dependencies
-
-```bash
-npm install
-```
-
-### 3. Configure environment variables
-
-Create a file named `.env.local` in the project root:
-
-```env
-MONGODB_URI="your-mongodb-connection-string"
-NEXTAUTH_SECRET="replace-with-a-long-random-secret"
-NEXTAUTH_URL="http://localhost:3000"
-```
-
-Replace the placeholder values with your own configuration. Never commit real credentials, database connection strings, API keys, or secrets to Git.
-
-> Some integrations may require additional environment variables depending on how they are configured. Check the relevant implementation before enabling them.
-
-### 4. Start the development server
-
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-The development server supports hot reloading, so changes to the application are reflected as you edit the code.
-
-## Available Scripts
-
-| Command | Description |
-| --- | --- |
-| `npm run dev` | Start the local development server |
-| `npm run build` | Create a production build |
-| `npm run start` | Start the production server (after building) |
-
-## Project Structure
-
-A simplified view of the main application directories:
+نمای ساده‌ای از پوشه‌ها و بخش‌های اصلی پروژه:
 
 ```text
 nextjs-shop/
 ├── app/
-│   ├── admin/          # Store administration pages
-│   ├── address/        # Address-related pages
-│   ├── api/            # REST API route handlers
-│   ├── auth/           # Login and registration pages
-│   ├── cart/           # Shopping cart
-│   ├── checkout/       # Checkout flow
-│   ├── components/     # Shared UI and feature components
-│   ├── context/        # React context providers
-│   ├── home/           # Home-page data helpers
-│   ├── lib/            # Shared utilities and database connection
-│   ├── panel/          # Customer account pages
-│   ├── products/       # Product detail pages
-│   └── styles/         # Application stylesheets
-├── models/             # Mongoose models
-├── public/             # Static assets and uploaded media
+│   ├── admin/          # صفحات پنل مدیریت
+│   ├── address/        # صفحات مربوط به نشانی‌ها
+│   ├── api/            # مسیرهای REST API
+│   ├── auth/           # صفحات ورود و ثبت‌نام
+│   ├── cart/           # سبد خرید
+│   ├── checkout/       # فرایند ثبت سفارش
+│   ├── components/     # کامپوننت‌های مشترک رابط کاربری
+│   ├── context/        # مدیریت وضعیت با React Context
+│   ├── home/           # ابزارها و اطلاعات صفحه اصلی
+│   ├── lib/            # توابع مشترک و اتصال پایگاه داده
+│   ├── panel/          # صفحات حساب کاربری
+│   ├── products/       # صفحات جزئیات محصولات
+│   └── styles/         # فایل‌های استایل
+├── models/             # مدل‌های Mongoose
+├── public/             # فایل‌های استاتیک و رسانه‌ها
 ├── package.json
 └── README.md
 ```
 
-## API Areas
+## بخش‌های API
 
-The API is grouped by feature under `app/api/`:
+مسیرهای API بر اساس قابلیت‌های مختلف در پوشه `app/api/` دسته‌بندی شده‌اند:
 
-- `/api/auth` — authentication and OTP operations
-- `/api/products` — product data and related product endpoints
-- `/api/categories` — category data
-- `/api/cart` — cart operations
-- `/api/order` and `/api/panel/orders` — order operations
-- `/api/address` — customer addresses
-- `/api/users` and `/api/panel/user` — user and account operations
-- `/api/discounts` — discounts and discount verification
-- `/api/comments` — product comments
+- `/api/auth` — عملیات احراز هویت و کد یک‌بارمصرف
+- `/api/products` — اطلاعات محصولات و محصولات مرتبط
+- `/api/categories` — اطلاعات دسته‌بندی‌ها
+- `/api/cart` — عملیات مربوط به سبد خرید
+- `/api/order` و `/api/panel/orders` — عملیات سفارش‌ها
+- `/api/address` — نشانی‌های کاربران
+- `/api/users` و `/api/panel/user` — اطلاعات کاربران و حساب کاربری
+- `/api/discounts` — تخفیف‌ها و بررسی اعتبار آن‌ها
+- `/api/comments` — دیدگاه‌های محصولات
 
-These are route groups, not a substitute for checking each route handler's accepted methods and request schema.
+این موارد گروه‌بندی کلی مسیرها هستند؛ برای اطلاع از متدهای قابل‌استفاده و ساختار درخواست هر مسیر، باید فایل پیاده‌سازی همان مسیر بررسی شود.
 
-## Database
+## ساختار پایگاه داده
 
-The application uses MongoDB with Mongoose models located in `models/`:
+پروژه برای ذخیره‌سازی اطلاعات از MongoDB و کتابخانه Mongoose استفاده می‌کند. مدل‌های اصلی در پوشه `models/` قرار دارند:
 
-- `User`
-- `Product`
-- `Category`
-- `Cart`
-- `Order`
-- `Discount`
-- `Comment`
-- `Otp`
+- `User` — کاربران
+- `Product` — محصولات
+- `Category` — دسته‌بندی‌ها
+- `Cart` — سبدهای خرید
+- `Order` — سفارش‌ها
+- `Discount` — تخفیف‌ها
+- `Comment` — دیدگاه‌ها
+- `Otp` — کدهای یک‌بارمصرف
 
-Set `MONGODB_URI` to a database you control. For local development, you can use a local MongoDB instance or a MongoDB Atlas connection string.
+## انتشار پروژه
 
-## Deployment
+نسخه آنلاین پروژه روی [Vercel](https://vercel.com/) منتشر شده است.
 
-The application can be deployed to a Node.js-compatible hosting platform such as [Vercel](https://vercel.com/).
+**لینک مشاهده پروژه:**  
+[https://nextjs-shop-devs.vercel.app/](https://nextjs-shop-devs.vercel.app/)
 
-For a production deployment:
+## روند توسعه با Git
 
-1. Push the repository to GitHub.
-2. Import the repository into your hosting provider.
-3. Configure the production environment variables in the hosting dashboard.
-4. Set `MONGODB_URI` to your production database connection string.
-5. Set `NEXTAUTH_URL` to your production application URL.
-6. Generate a strong, unique `NEXTAUTH_SECRET`.
-7. Deploy and verify the storefront, authentication, database connection, and checkout flow.
-
-Do not use development credentials or a local database URL in production.
-
-## Development Workflow
-
-A recommended workflow for new features:
+برای توسعه قابلیت‌های جدید، می‌توانید از روند زیر استفاده کنید:
 
 ```bash
-# Start from the latest main branch
+# دریافت آخرین تغییرات شاخه اصلی
 git switch main
 git pull origin main
 
-# Create a feature branch
+# ایجاد یک شاخه جدید برای قابلیت موردنظر
 git switch -c feature/your-feature-name
 
-# After making changes
+# ثبت تغییرات
 git add .
 git commit -m "Describe your changes"
 
-# Push the feature branch to GitHub
+# ارسال شاخه به GitHub
 git push -u origin feature/your-feature-name
 ```
 
-Open a Pull Request when the feature is ready to be reviewed and merged.
+پس از آماده‌شدن قابلیت، می‌توانید یک Pull Request ایجاد کنید تا تغییرات بررسی و به شاخه اصلی اضافه شوند.
 
-## Contributing
+## مشارکت در پروژه
 
-Contributions, bug reports, and suggestions are welcome.
+پیشنهادها، گزارش خطاها و مشارکت در توسعه پروژه مورد استقبال هستند.
 
-1. Fork the repository.
-2. Create a branch for your change.
-3. Keep changes focused and use clear commit messages.
-4. Test the affected functionality.
-5. Open a Pull Request with a concise explanation of the change.
+1. مخزن را Fork کنید.
+2. برای تغییرات خود یک شاخه جدید بسازید.
+3. تغییرات را تا حد امکان محدود و مشخص نگه دارید.
+4. بخش‌های مرتبط را آزمایش کنید.
+5. یک Pull Request همراه با توضیح مختصر ایجاد کنید.
 
-## Author
+## توسعه‌دهنده
 
 **Mehran Sharifi**
 
 - GitHub: [@mehrandevs](https://github.com/mehrandevs)
+- مخزن پروژه: [mehrandevs/nextjs-shop](https://github.com/mehrandevs/nextjs-shop)
+- نسخه آنلاین: [nextjs-shop-devs.vercel.app](https://nextjs-shop-devs.vercel.app/)
 
 ---
 
-Built with JavaScript, Next.js, React, and MongoDB.
+توسعه‌یافته با JavaScript، Next.js، React و MongoDB.
