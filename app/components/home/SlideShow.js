@@ -89,7 +89,7 @@ const SlideShow = () => {
               width={400}
               height={200}
               alt="slideshow-1"
-              className=" w-auto h-auto rounded-2"
+              className=" w-100 h-auto rounded-2"
             />
           </a>
         </section>
@@ -100,7 +100,7 @@ const SlideShow = () => {
               width={400}
               height={200}
               alt="slideshow-1"
-              className="w-auto h-auto rounded-2"
+              className="w-100 h-auto rounded-2"
             />
           </a>
         </section>
