@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/cart.css";
 import { useCart } from "../context/CartContext";
 import Image from "next/image";
@@ -19,8 +19,19 @@ const Cart = () => {
     error,
   } = useCart();
   const [loadingItem, setLoadingItem] = useState(null);
+useEffect(() => {
+  if (error) {
+    toast.error(error);
+  }
+}, [error]);
 
-  toast.error(error);
+  useEffect(() => {
+    if (loading) return;
+    if (!cart || cart.items.length === 0) {
+      toast.warning("سبد خرید خالی است");
+      return
+    }
+  }, [loading, cart])
 
   return (
     <SkeletonTheme direction="rtl" baseColor="#ececec" highlightColor="#f8f8f8">
@@ -111,7 +122,7 @@ const Cart = () => {
                                     type="button"
                                     disabled={
                                       item.quantity >=
-                                        (item.product?.stock || 0) ||
+                                      (item.product?.stock || 0) ||
                                       loadingItem === item.product?._id
                                     }
                                     onClick={async () => {

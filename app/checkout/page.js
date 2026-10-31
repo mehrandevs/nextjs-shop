@@ -22,13 +22,15 @@ const Checkout = () => {
     if (loading) return;
     if (!cart || cart.items.length === 0) {
       toast.warning("سبد خرید خالی است");
-      router.replace("/cart");
+      router.replace("/");
+      return
     }
     if (!cart.shippingAddress?.address) {
       toast.warning("ابتدا آدرس ارسال را انتخاب کنید");
       router.replace("/address");
+      return
     }
-  }, [loading]);
+  }, [loading,cart,router]);
 
   useEffect(() => {
     if (cart && cart.discountPrice > 0) {
