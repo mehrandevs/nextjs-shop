@@ -1,13 +1,13 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import "../styles/cart.css";
-import { useCart } from "../context/CartContext";
+import "@/app/styles/cart.css";
+import { useCart } from "../../context/CartContext";
 import Image from "next/image";
 import { toast } from "react-toastify";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import Link from "next/link";
-import CartItemSkeleton from "../components/home/CartItemSkeleton";
+import CartItemSkeleton from "../../components/home/CartItemSkeleton";
 
 const Cart = () => {
   const {

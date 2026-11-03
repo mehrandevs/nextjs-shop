@@ -1,6 +1,6 @@
 "use client";
 import { useCart } from "@/app/context/CartContext";
-import getCategories from "@/app/home/lib/getCategories";
+import getCategories from "@/app/(shop)/home/lib/getCategories";
 import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";

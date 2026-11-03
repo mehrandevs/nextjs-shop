@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import "../styles/address.css";
-import { useCart } from "../context/CartContext";
+import "@/app/styles/address.css";
+import { useCart } from "../../context/CartContext";
 import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
 const Address = () => {

@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
 import ProductCardSkeleton from "./ProductCardSkeleton";
-import getFeaturedProducts from "@/app/home/lib/getFeaturedProducts";
+import getFeaturedProducts from "@/app/(shop)/home/lib/getFeaturedProducts";
 import { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 

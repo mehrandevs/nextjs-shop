@@ -2,7 +2,7 @@
 import NoAuthWrapper from "@/app/components/auth/NoAuthWrapper";
 import Link from "next/link";
 import { signIn } from "next-auth/react";
-import "../../styles/login.css";
+import "@/app/styles/login.css";
 
 import React, { useEffect, useState } from "react";
 import {

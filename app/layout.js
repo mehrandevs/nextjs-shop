@@ -1,7 +1,6 @@
 import localFont from "next/font/local";
 import SessionProviderWrapper from "./components/auth/SessionProviderWrapper";
-import Footer from "./components/Layout/Footer";
-import Header from "./components/Layout/Header";
+
 import "./styles/globals.css";
 import "./styles/style.css";
 import "bootstrap/dist/css/bootstrap.rtl.min.css";
@@ -60,10 +59,9 @@ export default function RootLayout({ children }) {
       <body>
         <SessionProviderWrapper>
           <CartProvider>
-            <Header />
             <ToastContainer rtl position="top-center" />
-            <main>{children}</main>
-            <Footer />
+            
+              {children}
           </CartProvider>
         </SessionProviderWrapper>
         <Script

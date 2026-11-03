@@ -1,11 +1,11 @@
 "use client";
 import Image from "next/image";
-import { useCart } from "../context/CartContext";
-import "../styles/payment.css";
+import { useCart } from "../../context/CartContext";
+import "@/app/styles/payment.css";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
-import CartItemSkeleton from "../components/home/CartItemSkeleton";
+import CartItemSkeleton from "../../components/home/CartItemSkeleton";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import { Alert } from "react-bootstrap";

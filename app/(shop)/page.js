@@ -1,8 +1,8 @@
 import React from "react";
-import SlideShow from "./components/home/SlideShow";
-import FeaturedProducts from "./components/home/FeaturedProducts";
-import AdsSection from "./components/home/AdsSection";
-import BrandSection from "./components/home/BrandSection";
+import SlideShow from "../components/home/SlideShow";
+import FeaturedProducts from "../components/home/FeaturedProducts";
+import AdsSection from "../components/home/AdsSection";
+import BrandSection from "../components/home/BrandSection";
 
 const Home = () => {
   return (

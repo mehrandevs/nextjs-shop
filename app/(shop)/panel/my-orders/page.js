@@ -1,14 +1,13 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import "../../styles/filter.css";
-import "../../styles/profile.css";
+import "@/app/styles/filter.css";
+import "@/app/styles/profile.css";
 import Link from "next/link";
 import Image from "next/image";
 import SidebarPanel from "@/app/components/ui/SidebarPanel";
 import { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import Skeleton from "react-loading-skeleton";
-import CartItemSkeleton from "@/app/components/home/CartItemSkeleton";
 
 const MyOrders = () => {
   const [orders, setOrders] = useState([]);

@@ -1,7 +1,7 @@
 "use client";
 import SidebarPanel from "@/app/components/ui/SidebarPanel";
 import React from "react";
-import "../../styles/profile.css";
+import "@/app/styles/profile.css";
 
 const myProfile = () => {
   return (

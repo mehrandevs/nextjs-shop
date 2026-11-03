@@ -5,7 +5,7 @@ import { signIn } from "next-auth/react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
-import "../../styles/login.css";
+import "@/app/styles/login.css";
 import {
   Alert,
   Button,
