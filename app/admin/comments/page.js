@@ -125,7 +125,7 @@ const Comments = () => {
         </Col>
         <Col sm={12} md={10}>
           <Header />
-          <main className="content p-4 h-100 ">
+          <main className="content p-4  ">
             {" "}
             <h4 className="my-4">مدیرت نظرات</h4>
             {error && <GeneralError error={error} />}
