@@ -139,7 +139,7 @@ const UpdateProduct = () => {
         </Col>
         <Col sm={12} md={10}>
           <Header />
-          <main className="content p-4 h-100 ">
+          <main className="content p-4  ">
             {" "}
             <h2 className="my-4">ویرایش محصول </h2>
             {error && <Alert variant="danger">{error}</Alert>}

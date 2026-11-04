@@ -12,20 +12,33 @@ import {
   TbUsers,
 } from "react-icons/tb";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 const Sidebar = () => {
-  const pathname = usePathname();
+  const pathName = usePathname();
   return (
-    <aside className="h-100">
-      <Nav className="flex-column sidebar">
-        <Link href="/admin" className={pathname === "/admin" ? "active" : ""}>
+    <aside className=" sidebar">
+        <section className="border-bottom p-2 ">
+         <Link href="/" >
+          <Image
+            src="/images/logo/8.png"
+            alt="logo"
+            width={80}
+            height={30}
+            className=""
+          />
+         </Link>
+        </section>
+      <Nav className="flex-column ">
+
+        <Link href="/admin" className={pathName === "/admin" ? "active" : ""}>
           <TbHome />
           داشبورد
         </Link>
 
         <Link
           href="/admin/categories"
-          className={pathname === "/admin/categories" ? "active" : ""}
+          className={pathName === "/admin/categories" ? "active" : ""}
         >
           <TbCategoryPlus />
           دسته بندی ها
@@ -33,7 +46,7 @@ const Sidebar = () => {
 
         <Link
           href="/admin/products"
-          className={pathname === "/admin/products" ? "active" : ""}
+          className={pathName === "/admin/products" ? "active" : ""}
         >
           <TbBox />
           محصول ها
@@ -41,7 +54,7 @@ const Sidebar = () => {
 
         <Link
           href="/admin/discounts"
-          className={pathname === "/admin/discounts" ? "active" : ""}
+          className={pathName === "/admin/discounts" ? "active" : ""}
         >
           <TbPercentage />
           مدیریت کد های تخفیف
@@ -49,7 +62,7 @@ const Sidebar = () => {
 
         <Link
           href="/admin/comments"
-          className={pathname === "/admin/comments" ? "active" : ""}
+          className={pathName === "/admin/comments" ? "active" : ""}
         >
           <TbMessageCircle />
           مدیریت نظرات
@@ -57,14 +70,14 @@ const Sidebar = () => {
 
         <Link
           href="/admin/stock"
-          className={pathname === "/admin/stock" ? "active" : ""}
+          className={pathName === "/admin/stock" ? "active" : ""}
         >
           <TbBuildingWarehouse />
           مدیریت انبار
         </Link>
         <Link
           href="/admin/users"
-          className={pathname === "/admin/users" ? "active" : ""}
+          className={pathName === "/admin/users" ? "active" : ""}
         >
           <TbUsers />
           مدیریت کاربران
